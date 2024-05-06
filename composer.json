@@ -1,0 +1,25 @@
+{
+    "name" : "sajjad-rakhshani/IrSmsGates",
+    "description" : "send sms in php with iranian sms gateways",
+    "type": "library",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "IrSmsGates\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "keywords" : [
+        "php", "sms", "otp"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sajjad-rakhshani",
+            "email": "sajjad.rakhsjani@gmail.com"
+        }
+    ]
+}

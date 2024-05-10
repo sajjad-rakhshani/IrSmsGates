@@ -1,7 +1,8 @@
 {
-    "name" : "sajjad-rakhshani/IrSmsGates",
+    "name" : "sajjad-rakhshani/ir-sms-gates",
     "description" : "send sms in php with iranian sms gateways",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^8.0"
     },
@@ -15,7 +16,6 @@
     "keywords" : [
         "php", "sms", "otp"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "sajjad-rakhshani",

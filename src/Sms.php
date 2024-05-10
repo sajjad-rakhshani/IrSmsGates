@@ -4,15 +4,35 @@ use IrSmsGates\Classes\GateWayInterface;
 
 abstract class Sms
 {
+    private array $vars;
     abstract public function GateWayClass() : GateWayInterface;
 
-    public function send(string $to, string $text) : bool
+    public function to(string|array $to) : object
     {
-        return $this->GateWayClass()->send($to, $text);
+        $this->vars['to'] = $to;
+        return $this;
     }
 
-    public function sendPattern(string $to, string $text, array $vars) : bool
+    public function text(string|array $text) : object
     {
-        return $this->GateWayClass()->sendPattern($to, $text, $vars);
+        $this->vars['text'] = $text;
+        return $this;
+    }
+
+    public function from(string $from) : object
+    {
+        $this->vars['from'] = $from;
+        return $this;
+    }
+
+    public function pattern(string $pattern) : object
+    {
+        $this->vars['pattern'] = $pattern;
+        return $this;
+    }
+
+    public function send() : bool
+    {
+        return $this->GateWayClass()->send($this->vars);
     }
 }

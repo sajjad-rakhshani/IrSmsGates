@@ -4,7 +4,7 @@ use IrSmsGates\Classes\GateWayInterface;
 
 abstract class Sms
 {
-    private array $vars;
+    public array $vars;
     abstract public function GateWayClass() : GateWayInterface;
 
     public function to(string|array $to) : object
@@ -25,9 +25,9 @@ abstract class Sms
         return $this;
     }
 
-    public function pattern(string $pattern) : object
+    public function pattern(string|null $pattern) : object
     {
-        $this->vars['pattern'] = $pattern;
+        if (!is_null($pattern)) $this->vars['pattern'] = $pattern;
         return $this;
     }
 

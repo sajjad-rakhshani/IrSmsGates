@@ -46,14 +46,11 @@ class MeliPayamak implements GateWayInterface
     public function send(array $vars) : bool
     {
         if (is_null($this->soap)) return false;
-        $request = isset($vars['pattern']) ? 'sendPatternRequest' : 'sendRequest';
+        $request = (!empty($vars['pattern'])) ? 'sendPatternRequest' : 'sendRequest';
         try {
             $send_result = $this->$request($vars);
-            if (strlen($send_result) >= 15){
-                return true;
-            }else{
-                (new Log())->logToFile($send_result);
-            }
+            if (strlen($send_result) >= 15) return true;
+            (new Log())->logToFile($send_result);
         }catch (Exception $exception){
             (new Log())->logToFile($exception->getMessage());
             return false;

@@ -37,7 +37,7 @@ class MeliPayamak implements GateWayInterface
         return $this->soap->SendByBaseNumber([
             'username' => $this->username,
             'password' => $this->password,
-            'text' => $vars['text'],
+            'text' => array_values($vars['text']),
             'to' => $vars['to'],
             'bodyId' => $vars['pattern']
         ])->SendByBaseNumberResult;

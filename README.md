@@ -36,7 +36,7 @@ $melipayamak
 ```
 ### Ippanel
 ```php
-$ipPanel = new \IrSmsGates\Gateways\Ippanel($api_key);
+$ipPanel = new \IrSmsGates\Gateways\IpPanel($api_key);
 //simple send
 $ipPanel
     ->from($from) //send from

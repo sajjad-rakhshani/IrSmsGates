@@ -5,7 +5,7 @@ namespace IrSmsGates\Gateways;
 use IrSmsGates\Classes\GateWayInterface;
 use IrSmsGates\Sms;
 
-class Ippanel extends Sms
+class IpPanel extends Sms
 {
     public function __construct(protected string $api_key)
     {

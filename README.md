@@ -30,8 +30,24 @@ $melipayamak
 //send with pattern
 $melipayamak
     ->to($to) // only one number
-    ->text($patter_vars) // an array of your pattern variables. ['var1', 'var2', ...]
+    ->text($pattern_vars) // an array of your pattern variables (only values). ['var1', 'var2', ...]
     ->pattern($pattern) //your pattern code in melipayamak
     ->send(); //bool
+```
+### Ippanel
+```php
+$ipPanel = new \IrSmsGates\Gateways\Ippanel($api_key);
+//simple send
+$ipPanel
+    ->from($from) //send from
+    ->to($to) // a number or array of numbers
+    ->text($text)
+    ->send(); //bool
+//send with pattern
+$ipPanel
+    ->from($from) //send from
+    ->to($to) //only on number
+    ->pattern($pattern) //pattern code
+    ->text($pattern_vars) //an array of your pattern variables. ['var1' => 'value1', 'var2' => 'value2', ...]
 ```
 all error log to IrSms.log in your document root

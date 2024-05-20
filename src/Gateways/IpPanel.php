@@ -1,9 +1,9 @@
 <?php
 
-namespace IrSmsGates\Gateways;
+namespace SajjadRakhshani\IrSmsGates\Gateways;
 
-use IrSmsGates\Classes\GateWayInterface;
-use IrSmsGates\Sms;
+use SajjadRakhshani\IrSmsGates\Classes\GateWayInterface;
+use SajjadRakhshani\IrSmsGates\Sms;
 
 class IpPanel extends Sms
 {
@@ -13,6 +13,6 @@ class IpPanel extends Sms
 
     public function GateWayClass() : GateWayInterface
     {
-        return new \IrSmsGates\Classes\IpPanel($this->api_key);
+        return new \SajjadRakhshani\IrSmsGates\Classes\IpPanel($this->api_key);
     }
 }

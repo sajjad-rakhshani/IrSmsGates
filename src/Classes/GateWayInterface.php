@@ -1,5 +1,5 @@
 <?php
-namespace IrSmsGates\Classes;
+namespace SajjadRakhshani\IrSmsGates\Classes;
 interface GateWayInterface
 {
     public function send(array $vars) : bool;

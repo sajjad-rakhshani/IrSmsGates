@@ -1,6 +1,6 @@
 <?php
-namespace IrSmsGates;
-use IrSmsGates\Classes\GateWayInterface;
+namespace SajjadRakhshani\IrSmsGates;
+use SajjadRakhshani\IrSmsGates\Classes\GateWayInterface;
 
 abstract class Sms
 {

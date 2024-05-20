@@ -1,6 +1,6 @@
 <?php
 
-namespace IrSmsGates\Classes;
+namespace SajjadRakhshani\IrSmsGates\Classes;
 
 class Log implements GateWayInterface
 {

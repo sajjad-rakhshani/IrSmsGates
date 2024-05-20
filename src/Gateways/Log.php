@@ -1,9 +1,9 @@
 <?php
 
-namespace IrSmsGates\Gateways;
+namespace SajjadRakhshani\IrSmsGates\Gateways;
 
-use IrSmsGates\Sms;
-use IrSmsGates\Classes\GateWayInterface;
+use SajjadRakhshani\IrSmsGates\Sms;
+use SajjadRakhshani\IrSmsGates\Classes\GateWayInterface;
 
 class Log extends Sms
 {
@@ -13,6 +13,6 @@ class Log extends Sms
 
     public function GateWayClass() : GateWayInterface
     {
-        return new \IrSmsGates\Classes\Log($this->log_to);
+        return new \SajjadRakhshani\IrSmsGates\Classes\Log($this->log_to);
     }
 }

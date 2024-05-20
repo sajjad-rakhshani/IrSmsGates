@@ -1,7 +1,7 @@
 <?php
-namespace IrSmsGates\Gateways;
-use IrSmsGates\Classes\GateWayInterface;
-use IrSmsGates\Sms;
+namespace SajjadRakhshani\IrSmsGates\Gateways;
+use SajjadRakhshani\IrSmsGates\Classes\GateWayInterface;
+use SajjadRakhshani\IrSmsGates\Sms;
 
 class MeliPayamak extends Sms
 {
@@ -11,6 +11,6 @@ class MeliPayamak extends Sms
 
     public function GateWayClass() : GateWayInterface
     {
-        return new \IrSmsGates\Classes\MeliPayamak($this->username, $this->password);
+        return new \SajjadRakhshani\IrSmsGates\Classes\MeliPayamak($this->username, $this->password);
     }
 }

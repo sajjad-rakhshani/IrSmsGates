@@ -1,5 +1,5 @@
 <?php
-namespace IrSmsGates\Classes;
+namespace SajjadRakhshani\IrSmsGates\Classes;
 use \Exception;
 trait Validate
 {

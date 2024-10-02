@@ -3,7 +3,7 @@ send sms with iranian sms gateways
 ## installation
 use the composer to install IrSmsGates.
 ```bash
-composer require sajjad-rakhshani/IrSmsGates
+composer require sajjad-rakhshani/ir-sms-gates
 ```
 ## usage
 ### log to file
